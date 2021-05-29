@@ -29,7 +29,7 @@
     var camera = new THREE.PerspectiveCamera(45, width / height, 1, 1000);
 
 
-  //角錐
+  //三角錐
 var coneGeometry = new THREE.ConeGeometry( 0.5, 1, 5 ); 
 var coneMaterial = new THREE. MeshPhongMaterial( { color: 0x0000ff } );
 var cone = new THREE.Mesh( coneGeometry, coneMaterial );
@@ -83,7 +83,7 @@ scene.add( sphere4 );
       sphere4.rotation.z += 0.1;
       sphere4.rotation.y += 0.1;
       
-      //角錐が迫る
+      //三角錐が迫る
       cone.position.z +=0.135;
   
       renderer.render(scene, camera);
