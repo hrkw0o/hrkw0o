@@ -48,10 +48,10 @@ scene.add( sphere1 );
 scene.add( sphere2 );
     
 //球
-var geometry = new THREE.BoxGeometry( 0.5, 32, 32 ); 
-var material = new THREE. MeshPhongMaterial( {color: 0xb22222,wireframe: true} );
-var sphere1 = new THREE.Mesh( geometry, material );
-var sphere2 = new THREE.Mesh( geometry, material );
+var cylinderGeometry = new THREE.cylinderGeometry( 0.5, 32, 32 ); 
+var cylinderMaterial = new THREE. MeshPhongMaterial( {color: 0xb22222,wireframe: true} );
+var sphere1 = new THREE.Mesh( cylinderGeometry, cylinderMaterial );
+var sphere2 = new THREE.Mesh( cylinderGeometry, cylinderMaterial );
 sphere1.position.set( -1.6, 1.2, -5 );
 sphere2.position.set( 1.6, -1.2, -5 );
 scene.add( sphere1 );
