@@ -63,11 +63,12 @@ scene.add( sphere2 );
       requestAnimationFrame(update);
   
       // 箱を回転させる
-      coneKnot.rotation.x += 0.01;
-      coneKnot.rotation.y += 0.01;
+      cone.rotation.x += 0.01;
+      cone.rotation.y += 0.01;
       sphere1.rotation.y += 0.01;
       sphere2.rotation.y += 0.01;
-
+      
+      //円錐が迫る
       cone.position.z +=0.01;
   
       renderer.render(scene, camera);
