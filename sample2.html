@@ -39,11 +39,11 @@ scene.add( cone );
 
 //球
 var sphereGeometry = new THREE.SphereGeometry( 0.5, 32, 32 ); 
-var sphereMaterial = new THREE. MeshPhongMaterial( {color: 0xff8800,wireframe: true} );
+var sphereMaterial = new THREE. MeshPhongMaterial( {color: 0x32cd32,wireframe: true} );
 var sphere1 = new THREE.Mesh( sphereGeometry, sphereMaterial );
 var sphere2 = new THREE.Mesh( sphereGeometry, sphereMaterial );
-sphere1.position.set( 1.6, 0, -5 );
-sphere2.position.set( -1.6, 0, -5 );
+sphere1.position.set( 1.6, 1.2, -5 );
+sphere2.position.set( -1.6, -1.2, -5 );
 scene.add( sphere1 );
 scene.add( sphere2 );
 
@@ -62,9 +62,10 @@ scene.add( sphere2 );
     var update = function() {
       requestAnimationFrame(update);
   
-      // 箱を回転させる
+      // 立体を回転させる
       cone.rotation.x += 0.01;
       cone.rotation.y += 0.01;
+      cone.rotation.z += 0.1;
       sphere1.rotation.y += 0.01;
       sphere2.rotation.z += 0.1;
       sphere2.rotation.y += 0.1;
