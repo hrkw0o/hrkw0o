@@ -33,7 +33,7 @@
 var coneGeometry = new THREE.ConeGeometry( 0.5, 1, 5 ); 
 var coneMaterial = new THREE. MeshPhongMaterial( { color: 0x0000ff } );
 var cone = new THREE.Mesh( coneGeometry, coneMaterial );
-cone.position.set( 0, 0, -20);
+cone.position.set( 0, 0, -50);
 scene.add( cone );
 
 
@@ -69,7 +69,7 @@ scene.add( sphere2 );
       sphere2.rotation.y += 0.01;
       
       //円錐が迫る
-      cone.position.z +=0.1;
+      cone.position.z +=0.11;
   
       renderer.render(scene, camera);
     };
