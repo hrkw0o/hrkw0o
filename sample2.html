@@ -47,15 +47,15 @@ sphere2.position.set( -1.6, -1.2, -5 );
 scene.add( sphere1 );
 scene.add( sphere2 );
     
-//球
-var cylinderGeometry = new THREE.cylinderGeometry( 0.5, 32, 32 ); 
+//角柱
+var cylinderGeometry = new THREE.cylinderGeometry( 0.5, 32, 32, 8 ); 
 var cylinderMaterial = new THREE. MeshPhongMaterial( {color: 0xb22222,wireframe: true} );
-var sphere1 = new THREE.Mesh( cylinderGeometry, cylinderMaterial );
-var sphere2 = new THREE.Mesh( cylinderGeometry, cylinderMaterial );
-sphere1.position.set( -1.6, 1.2, -5 );
-sphere2.position.set( 1.6, -1.2, -5 );
-scene.add( sphere1 );
-scene.add( sphere2 );
+var sphere3 = new THREE.Mesh( cylinderGeometry, cylinderMaterial );
+var sphere4 = new THREE.Mesh( cylinderGeometry, cylinderMaterial );
+sphere3.position.set( -1.6, 1.2, -5 );
+sphere4.position.set( 1.6, -1.2, -5 );
+scene.add( sphere3 );
+scene.add( sphere4 );
 
     // 平行光源1
     var directionalLight1 = new THREE.DirectionalLight(0xffffff);
@@ -79,6 +79,9 @@ scene.add( sphere2 );
       sphere1.rotation.y += 0.01;
       sphere2.rotation.z += 0.1;
       sphere2.rotation.y += 0.1;
+      sphere3.rotation.y += 0.01;
+      sphere4.rotation.z += 0.1;
+      sphere4.rotation.y += 0.1;
       
       //角錐が迫る
       cone.position.z +=0.135;
