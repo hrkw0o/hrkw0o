@@ -29,11 +29,11 @@
     var camera = new THREE.PerspectiveCamera(45, width / height, 1, 1000);
 
 
-  //ドーナッツ
-var torusGeometry = new THREE.TorusGeometry( 3.3, 1.5, 24, 24 ); 
-var torusMaterial = new THREE. MeshToonMaterial( { color: 0xd66b00 } );
-var torus = new THREE.Mesh( torusGeometry, torusMaterial );
-torus.position.set( 0.5, 0, -20);
+  //円錐
+var coneGeometry = new THREE.TorusGeometry( 0.5, 1, 5 ); 
+var coneMaterial = new THREE. MeshToonMaterial( { color: 0x0000ff } );
+var cone = new THREE.Mesh( torusGeometry, torusMaterial );
+cone.position.set( 0.5, 0, -20);
 scene.add( torus );
 
 
