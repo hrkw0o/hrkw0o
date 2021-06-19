@@ -31,6 +31,7 @@
 
         // カメラコントローラーを作成
         const controls = new THREE.OrbitControls(camera,document.body);
+        
   
         // 平行光源1(上正面）
         var directionalLight1 = new THREE.DirectionalLight(0xffffff);
@@ -45,9 +46,14 @@
 
         // テクスチャー読み込み
         var textureLoader = new THREE.TextureLoader();  
-        var texture = textureLoader.load("img/earth.png");
-        var mat = new THREE.MeshPhongMaterial();
+        var texture = textureLoader.load("sukinichiran.png");
+        var mat = new THREE.MeshPhongMaterial( {transparent: true} );
         mat.map = texture;
+        
+        // 「スキン一覧」を作成
+        var geometry = new THREE.PlaneGeometry(75, 100);
+        var sukinichiran = new THREE.Mesh(geometry, mat0);
+        scene.add(0, 400, 500);
         
         //八角柱
         var cylinderGeometry1 = new THREE.CylinderGeometry( 100, 75, 150, 8 ); 
