@@ -42,12 +42,6 @@
         directionalLight2.position.set(0, -1200, -400);
         // シーンに追加
         scene.add(directionalLight2);
-
-        // テクスチャー読み込み
-        var textureLoader = new THREE.TextureLoader();  
-        var texture = textureLoader.load("img/earth.png");
-        var mat = new THREE.MeshPhongMaterial();
-        mat.map = texture;
         
         //八角柱
         var cylinderGeometry1 = new THREE.CylinderGeometry( 100, 75, 150, 8 ); 
@@ -73,7 +67,6 @@
         scene.add( sphere3 );
         scene.add( sphere4 );
         scene.add( sphere5 );
-        
         
         tick();
 
