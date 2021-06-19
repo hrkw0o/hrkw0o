@@ -37,6 +37,16 @@
         var texture1 = textureLoader1.load("sukin1.png");
         var mat1 = new THREE.MeshPhongMaterial();
         mat1.map = texture1;
+        
+        var textureLoader2 = new THREE.TextureLoader(); 
+        var texture2 = textureLoader2.load("sukin2.png");
+        var mat2 = new THREE.MeshPhongMaterial();
+        mat2.map = texture2;
+        
+        var textureLoader3 = new THREE.TextureLoader(); 
+        var texture3 = textureLoader3.load("sukin3.png");
+        var mat3 = new THREE.MeshPhongMaterial();
+        mat3.map = texture3;
   
         // 平行光源1(上正面）
         var directionalLight1 = new THREE.DirectionalLight(0xffffff);
@@ -59,6 +69,24 @@
         scene.add( sphere1 );
         scene.add( sphere2 );
         
+        var cylinderGeometry11 = new THREE.CylinderGeometry( 100, 75, 150, 8 ); 
+        var cylinderGeometry12 = new THREE.CylinderGeometry( 60, 120, 400, 8 ); 
+        var sphere11 = new THREE.Mesh( cylinderGeometry11, mat2 );
+        var sphere12 = new THREE.Mesh( cylinderGeometry12, mat2 );
+        sphere11.position.set( 500, 150, 0 );
+        sphere12.position.set( 500, -120, 0 );
+        scene.add( sphere11 );
+        scene.add( sphere12 );
+        
+        var cylinderGeometry21 = new THREE.CylinderGeometry( 100, 75, 150, 8 ); 
+        var cylinderGeometry22 = new THREE.CylinderGeometry( 60, 120, 400, 8 ); 
+        var sphere21 = new THREE.Mesh( cylinderGeometry21, mat3 );
+        var sphere22 = new THREE.Mesh( cylinderGeometry22, mat3 );
+        sphere1.position.set( -500, 150, 0 );
+        sphere2.position.set( -500, -120, 0 );
+        scene.add( sphere21 );
+        scene.add( sphere22 );
+        
         //四角柱
         var geometry1 = new THREE.BoxGeometry(50, 150, 50);
         var geometry2 = new THREE.BoxGeometry(50, 30, 50);
@@ -72,6 +100,31 @@
         scene.add( sphere3 );
         scene.add( sphere4 );
         scene.add( sphere5 );
+        
+        var geometry11 = new THREE.BoxGeometry(50, 150, 50);
+        var geometry12 = new THREE.BoxGeometry(50, 30, 50);
+        var sphere13 = new THREE.Mesh(geometry11, material);
+        var sphere14 = new THREE.Mesh(geometry12, material);
+        var sphere15 = new THREE.Mesh(geometry12, material);
+        sphere13.position.set( 500, 250, 0 );
+        sphere14.position.set( 525, 275, 0 );
+        sphere15.position.set( 475, 275, 0 );
+        scene.add( sphere13 );
+        scene.add( sphere14 );
+        scene.add( sphere15 );
+        
+        var geometry21 = new THREE.BoxGeometry(50, 150, 50);
+        var geometry22 = new THREE.BoxGeometry(50, 30, 50);
+        var sphere23 = new THREE.Mesh(geometry21, material);
+        var sphere24 = new THREE.Mesh(geometry22, material);
+        var sphere25 = new THREE.Mesh(geometry22, material);
+        sphere23.position.set( -500, 250, 0 );
+        sphere24.position.set( -475, 275, 0 );
+        sphere25.position.set( -525, 275, 0 );
+        scene.add( sphere23 );
+        scene.add( sphere24 );
+        scene.add( sphere25 );
+        
         
         
         tick();
