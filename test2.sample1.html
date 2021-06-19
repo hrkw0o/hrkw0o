@@ -49,14 +49,13 @@
         mat.map = texture;
         
         //八角柱
-        var cylinderGeometry = new THREE.CylinderGeometry( 300, 30, 30, 8 ); 
+        var cylinderGeometry = new THREE.CylinderGeometry( 100, 75, 60, 8 ); 
         var cylinderMaterial = new THREE. MeshPhongMaterial( {color: 0x000000} );
         var sphere1 = new THREE.Mesh( cylinderGeometry, cylinderMaterial );
         scene.add( sphere1 );
         
         // 立体を回転させる
         sphere1.rotation.y += 0.01;
-        sphere2.rotation.y += 0.01;
         
         tick();
 
