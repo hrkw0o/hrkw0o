@@ -32,6 +32,11 @@
         // カメラコントローラーを作成
         const controls = new THREE.OrbitControls(camera,document.body);
         
+        // テクスチャー読み込み
+        var textureLoader1 = new THREE.TextureLoader(); 
+        var texture1 = textureLoader1.load("sukin1.png");
+        var mat1 = new THREE.MeshPhongMaterial();
+        mat1.map = texture1;
   
         // 平行光源1(上正面）
         var directionalLight1 = new THREE.DirectionalLight(0xffffff);
@@ -47,9 +52,8 @@
         //八角柱
         var cylinderGeometry1 = new THREE.CylinderGeometry( 100, 75, 150, 8 ); 
         var cylinderGeometry2 = new THREE.CylinderGeometry( 60, 120, 400, 8 ); 
-        var cylinderMaterial = new THREE. MeshPhongMaterial( {color: 0xffffff} );
-        var sphere1 = new THREE.Mesh( cylinderGeometry1, cylinderMaterial );
-        var sphere2 = new THREE.Mesh( cylinderGeometry2, cylinderMaterial );
+        var sphere1 = new THREE.Mesh( cylinderGeometry1, mat1 );
+        var sphere2 = new THREE.Mesh( cylinderGeometry2, mat1 );
         sphere1.position.set( 0, 150, 0 );
         sphere2.position.set( 0, -120, 0 );
         scene.add( sphere1 );
