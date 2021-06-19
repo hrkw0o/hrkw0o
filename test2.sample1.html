@@ -60,15 +60,15 @@
         scene.add( sphere2 );
         
         //四角柱
-        var cylinderGeometry3 = new THREE.CylinderGeometry( 50, 50, 75, 4 ); 
-        var cylinderGeometry4 = new THREE.CylinderGeometry( 50, 50, 20, 4 ); 
-        var cylinderMaterial = new THREE. MeshPhongMaterial( {color: 0xffffff} );
-        var sphere3 = new THREE.Mesh( cylinderGeometry3, cylinderMaterial );
-        var sphere4 = new THREE.Mesh( cylinderGeometry4, cylinderMaterial );
-        var sphere5 = new THREE.Mesh( cylinderGeometry4, cylinderMaterial );
+        var geometry1 = new THREE.BoxGeometry(50, 50, 100);
+        var geometry2 = new THREE.BoxGeometry(50, 50, 20);
+        var material = new THREE.MeshPhongMaterial({ color: 0x0000ff });
+        var sphere3 = new THREE.Mesh(geometry1, material);
+        var sphere4 = new THREE.Mesh(geometry2, material);
+        var sphere5 = new THREE.Mesh(geometry2, material);
         sphere3.position.set( 0, 425, 0 );
-        sphere4.position.set( 30, 425, 30 );
-        sphere5.position.set( -30, 425, -30 );
+        sphere4.position.set( 25, 425, 25 );
+        sphere5.position.set( -25, 425, -25 );
         scene.add( sphere3 );
         scene.add( sphere4 );
         scene.add( sphere5 );
