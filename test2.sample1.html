@@ -31,26 +31,36 @@
         // カメラコントローラーを作成
         const controls = new THREE.OrbitControls(camera,document.body);
   
-        // 平行光源1(上正面）
+        // 平行光源1(正面）
         var directionalLight1 = new THREE.DirectionalLight(0xffffff);
-        directionalLight1.position.set(0, 200, 200);
+        directionalLight1.position.set(0, 0, 200);
         // シーンに追加
         scene.add(directionalLight1);
-        // 平行光源2(下後面）
+        // 平行光源2(後面）
         var directionalLight2 = new THREE.DirectionalLight(0xffffff);
-        directionalLight2.position.set(0, -400, -200);
+        directionalLight2.position.set(0, 0, -200);
         // シーンに追加
         scene.add(directionalLight2);
         // 平行光源3(右側面）
         var directionalLight3 = new THREE.DirectionalLight(0xffffff);
-        directionalLight2.position.set(200, 0, 0);
+        directionalLight3.position.set(200, 0, 0);
         // シーンに追加
         scene.add(directionalLight3);
         // 平行光源4（左側面）
         var directionalLight4 = new THREE.DirectionalLight(0xffffff);
-        directionalLight2.position.set(-200,　0, 0);
+        directionalLight4.position.set(-200,　0, 0);
         // シーンに追加
         scene.add(directionalLight4);
+        // 平行光源5（上面）
+        var directionalLight5 = new THREE.DirectionalLight(0xffffff);
+        directionalLight5.position.set(0, 200, 0);
+        // シーンに追加
+        scene.add(directionalLight5);
+        // 平行光源6（下面）
+        var directionalLight6 = new THREE.DirectionalLight(0xffffff);
+        directionalLight6.position.set(0, -600, 0);
+        // シーンに追加
+        scene.add(directionalLight6);
 
         // テクスチャー読み込み
         var textureLoader = new THREE.TextureLoader();  
