@@ -1040,4 +1040,4 @@ Object.defineProperties( THREE.OrbitControls.prototype, {
 
 	}
 
-} );
+} ); 
