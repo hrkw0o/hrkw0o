@@ -50,11 +50,11 @@
         
         //八角柱
         var cylinderGeometry = new THREE.CylinderGeometry( 100, 75, 150, 8 ); 
-        var cylinderMaterial = new THREE. MeshPhongMaterial( {color: 0x000000} );
+        var cylinderMaterial = new THREE. MeshPhongMaterial( {color: 0xffffff} );
         var sphere1 = new THREE.Mesh( cylinderGeometry, cylinderMaterial );
         var sphere2 = new THREE.Mesh( cylinderGeometry, cylinderMaterial );
-        sphere1.position.set( 0, 80, 0 );
-        sphere2.position.set( 0, -80, 0 );
+        sphere1.position.set( 0, 150, 0 );
+        sphere2.position.set( 0, -150, 0 );
         scene.add( sphere1 );
         scene.add( sphere2 );
         
