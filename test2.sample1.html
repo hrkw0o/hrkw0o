@@ -49,10 +49,11 @@
         mat.map = texture;
         
         //八角柱
-        var cylinderGeometry = new THREE.CylinderGeometry( 100, 75, 150, 8 ); 
+        var cylinderGeometry1 = new THREE.CylinderGeometry( 100, 75, 150, 8 ); 
+        var cylinderGeometry2 = new THREE.CylinderGeometry( 60, 120, 500, 8 ); 
         var cylinderMaterial = new THREE. MeshPhongMaterial( {color: 0xffffff} );
-        var sphere1 = new THREE.Mesh( cylinderGeometry, cylinderMaterial );
-        var sphere2 = new THREE.Mesh( cylinderGeometry, cylinderMaterial );
+        var sphere1 = new THREE.Mesh( cylinderGeometry1, cylinderMaterial );
+        var sphere2 = new THREE.Mesh( cylinderGeometry2, cylinderMaterial );
         sphere1.position.set( 0, 150, 0 );
         sphere2.position.set( 0, -150, 0 );
         scene.add( sphere1 );
