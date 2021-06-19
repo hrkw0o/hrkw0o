@@ -69,17 +69,6 @@
         scene.add( sphere4 );
         scene.add( sphere5 );
         
-        //スプライト作成
-        var textureLoader = new THREE.TextureLoader(); 
-        var texture = textureLoader.load(".png");
-        const material = new THREE.SpriteMaterial({ map: texture,});
-        const sprite = new THREE.Sprite(material);
-        sprite.position.x = 0;
-        sprite.position.y = 0;
-        sprite.position.z = 0;
-        sprite.scale.set(1500,700,500);
-        scene.add(sprite);
-        
         
         tick();
 
