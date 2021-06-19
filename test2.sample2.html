@@ -43,18 +43,6 @@
         directionalLight2.position.set(0, -1200, -400);
         // シーンに追加
         scene.add(directionalLight2);
-
-        // スプライト作成
-        var textureLoader = new THREE.TextureLoader(); 
-        var texture = textureLoader.load("sukinichiran.png");
-        const material = new THREE.SpriteMaterial({ map: texture,});
-        
-        const sprite = new THREE.Sprite(material);
-        sprite.position.x = 0;
-        sprite.position.y = 0;
-        sprite.position.z = 0;
-        sprite.scale.set(100,100,100);
-        scene.add(sprite);
         
         //八角柱
         var cylinderGeometry1 = new THREE.CylinderGeometry( 100, 75, 150, 8 ); 
