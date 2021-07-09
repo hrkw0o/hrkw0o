@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>四角錐</title>
+    <title>円錐</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
     <script src="OrbitControls.js"></script>
     <script>
@@ -44,7 +44,7 @@
         scene.add(directionalLight2);
         
          //三角錐
-         var coneGeometry = new THREE.ConeGeometry( 200, 250, 200 ); 
+         var coneGeometry = new THREE.ConeGeometry( 300, 350, 300 ); 
          var coneMaterial = new THREE. MeshPhongMaterial( { color: 0xffffff } );
          var cone = new THREE.Mesh( coneGeometry, coneMaterial );
          cone.position.set( 0, 0, -20);
