@@ -10,8 +10,8 @@
 
       function init() {
         // サイズを指定
-        const width = 960;
-        const height = 540;
+        const width = 800;
+        const height = 600;
 
         // レンダラーを作成
         const renderer = new THREE.WebGLRenderer({
@@ -45,13 +45,10 @@
         
         //球
         var sphereGeometry = new THREE.SphereGeometry( 0.5, 32, 32 ); 
-        var sphereMaterial = new THREE. MeshPhongMaterial( {color: 0x32cd32,wireframe: true} );
+        var sphereMaterial = new THREE. MeshPhongMaterial( {color: 0xffffff} );
         var sphere1 = new THREE.Mesh( sphereGeometry, sphereMaterial );
-        var sphere2 = new THREE.Mesh( sphereGeometry, sphereMaterial );
         sphere1.position.set( 1.6, 1.2, -5 );
-        sphere2.position.set( -1.6, -1.2, -5 );
         scene.add( sphere1 );
-        scene.add( sphere2 );
         
         tick();
 
