@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>king</title>
+    <title>三角柱</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
     <script src="OrbitControls.js"></script>
     <script>
@@ -43,30 +43,13 @@
         // シーンに追加
         scene.add(directionalLight2);
         
-        //八角柱
-        var cylinderGeometry1 = new THREE.CylinderGeometry( 100, 75, 150, 8 ); 
+        //三角柱
+        var cylinderGeometry1 = new THREE.CylinderGeometry( 100, 75, 150, 3 ); 
         var cylinderGeometry2 = new THREE.CylinderGeometry( 60, 120, 400, 8 ); 
         var cylinderMaterial = new THREE. MeshPhongMaterial( {color: 0xffffff} );
         var sphere1 = new THREE.Mesh( cylinderGeometry1, cylinderMaterial );
-        var sphere2 = new THREE.Mesh( cylinderGeometry2, cylinderMaterial );
         sphere1.position.set( 0, 150, 0 );
-        sphere2.position.set( 0, -120, 0 );
         scene.add( sphere1 );
-        scene.add( sphere2 );
-        
-        //四角柱
-        var geometry1 = new THREE.BoxGeometry(50, 150, 50);
-        var geometry2 = new THREE.BoxGeometry(50, 30, 50);
-        var material = new THREE.MeshPhongMaterial({ color: 0xffffff });
-        var sphere3 = new THREE.Mesh(geometry1, material);
-        var sphere4 = new THREE.Mesh(geometry2, material);
-        var sphere5 = new THREE.Mesh(geometry2, material);
-        sphere3.position.set( 0, 250, 0 );
-        sphere4.position.set( 25, 275, 0 );
-        sphere5.position.set( -25, 275, 0 );
-        scene.add( sphere3 );
-        scene.add( sphere4 );
-        scene.add( sphere5 );
         
         tick();
 
