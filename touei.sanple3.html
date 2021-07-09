@@ -43,13 +43,15 @@
         // シーンに追加
         scene.add(directionalLight2);
         
-        //三角柱
-        var cylinderGeometry1 = new THREE.CylinderGeometry( 100, 75, 150, 3 ); 
-        var cylinderGeometry2 = new THREE.CylinderGeometry( 60, 120, 400, 8 ); 
-        var cylinderMaterial = new THREE. MeshPhongMaterial( {color: 0xffffff} );
-        var sphere1 = new THREE.Mesh( cylinderGeometry1, cylinderMaterial );
-        sphere1.position.set( 0, 150, 0 );
+        //球
+        var sphereGeometry = new THREE.SphereGeometry( 0.5, 32, 32 ); 
+        var sphereMaterial = new THREE. MeshPhongMaterial( {color: 0x32cd32,wireframe: true} );
+        var sphere1 = new THREE.Mesh( sphereGeometry, sphereMaterial );
+        var sphere2 = new THREE.Mesh( sphereGeometry, sphereMaterial );
+        sphere1.position.set( 1.6, 1.2, -5 );
+        sphere2.position.set( -1.6, -1.2, -5 );
         scene.add( sphere1 );
+        scene.add( sphere2 );
         
         tick();
 
