@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>三角柱</title>
+    <title>四角柱</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
     <script src="OrbitControls.js"></script>
     <script>
@@ -44,7 +44,7 @@
         scene.add(directionalLight2);
         
         //三角柱
-        var cylinderGeometry1 = new THREE.CylinderGeometry( 300, 300, 350, 3 ); 
+        var cylinderGeometry1 = new THREE.CylinderGeometry( 300, 300, 300,　4 ); 
         var cylinderMaterial = new THREE. MeshPhongMaterial( {color: 0xffffff} );
         var sphere1 = new THREE.Mesh( cylinderGeometry1, cylinderMaterial );
         sphere1.position.set( 0, 0, 0 );
